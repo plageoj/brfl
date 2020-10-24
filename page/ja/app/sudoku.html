@@ -1,0 +1,118 @@
+<h2>Sudoku step solver</h2>
+<p>独習で作った数独ソルバーです。がばがばです。</p>
+<div ng-controller="SudokuCtrl as sdk">
+    <table>
+        <tbody>
+            <tr ng-repeat="i in sdk.tbl">
+                <td ng-repeat="j in i" ng-class="{emphasis:j.solve==sdk.actv}">
+                    <span class="solve" ng-click="sdk.actv=j.solve" ng-show="j.solve">{{j.solve}}</span>
+                    <table ng-click="sdk.fill($parent.$index,$index,true)" ng-hide="j.solve">
+                        <tr>
+                            <td>{{j[1]?1:''}}</td>
+                            <td>{{j[2]?2:''}}</td>
+                            <td>{{j[3]?3:''}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{j[4]?4:''}}</td>
+                            <td>{{j[5]?5:''}}</td>
+                            <td>{{j[6]?6:''}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{j[7]?7:''}}</td>
+                            <td>{{j[8]?8:''}}</td>
+                            <td>{{j[9]?9:''}}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <table>
+        <tbody>
+            <tr>
+                <td ng-repeat="i in sdk.seq" ng-click="sdk.actv=i" ng-class="{emphasis:i==sdk.actv}"><span class="solve">{{i}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <button ng-click="sdk.solve(true)">STEP</button>
+        <button ng-click="sdk.solve(false)">SOLVE</button><br><br>
+        <button ng-click="sdk.undo()">UNDO</button> &nbsp; | &nbsp;
+        <button ng-click="sdk.reset()">RESET</button>
+    </p>
+</div>
+
+<style>
+    table {
+        margin: auto;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    table * {
+        user-select: none;
+    }
+
+    div>table {
+        width: 27em;
+    }
+
+    div>table>tbody>tr>td {
+        min-width: 3.1em;
+        height: 3.1em;
+    }
+
+    table tr td {
+        padding: 0;
+        text-align: center;
+    }
+
+    table table {
+        width: 3em;
+        height: 3em;
+        cursor: pointer;
+    }
+
+    table table tr {
+        border: none;
+        background: transparent!important;
+    }
+
+    table tr:nth-of-type(3n):not(:last-of-type)>td {
+        border-bottom: #000 solid 2px!important;
+    }
+
+    table tr td:nth-of-type(3n):not(:last-of-type) {
+        border-right: #000 solid 2px!important;
+    }
+
+    table table tr td {
+        border: none;
+        font-size: .7em;
+        line-height: .8em;
+        color: #666;
+        text-align: center;
+        min-width: 1em;
+        height: 1em;
+    }
+
+    .solve {
+        font-size: 1.7em;
+        cursor: pointer;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .solve:active {
+        background: rgba(0, 0, 0, .3);
+    }
+
+    .emphasis {
+        background: #007e00;
+    }
+
+    .emphasis .solve {
+        color: #fff;
+    }
+</style>

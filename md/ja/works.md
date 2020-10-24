@@ -1,0 +1,17 @@
+## 作品群
+- [mdstatic](//github.com/plageoj/mdstatic)
+    - このサイトを支える、軽量マークダウンサイトビルダーフレームワークです。
+- [LINE で LaTeX を送りたい！ LaTexIt!](//qiita.com/plageoj/items/3df087999d550338e2b8)
+- [コーデに悩まなくなるアプリ 洋服カード](#x/portfolio/clothscard)
+- [Twitter for PC-G850](//protopedia.net/prototype/95192c98732387165bf8e396c0f2dad2) / [ソースも](//github.com/plageoj/etajima-smart-ticket)
+    - ポケットコンピュータ PC-G850 シリーズで Twitter ができるようになるスイートです。
+    - ヒーローズリーグ 2019 MAリーグ3位、オレトクリーグ優勝、学生リーグ優勝の3冠をいただいた作品です。
+- [江田島スマートチケット](//etajima-smart-ticket.now.sh/) / [ソースも](//github.com/plageoj/etajima-smart-ticket)
+    - 交通機関に乗る前に決済をして、初めての場所でもスムーズに乗降できるサービスです。
+    - インバウンド需要も考慮しています。
+    - [交通系データ・ハッカソン（レッドハッカソンHIROSHIMA 2019 episode.2）](//hmcn.connpass.com/event/162651/)で優勝した作品です。
+- [しりとるあ](//github.com/plageoj/shiritolua)
+    - Discordでしりとりができるチャットボットです。
+- [NEO Tic-Tac-Toe](//www.amazon.com/Penta-NEO-Tic-Tac-Toe/dp/B01DYH436C) / [ソースも](//github.com/plageoj/tic-tac-toe)
+    - ポケコンで開発した特殊な三目並べを Android に移植したものです。4手前が消えるので、引き分けになりません。
+    - COM 思考ルーチンも作っています。
